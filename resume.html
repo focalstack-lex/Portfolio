@@ -337,15 +337,36 @@
       color: var(--text-primary);
     }
 
-    /* Print Styles (Black on White for crisp PDF output) */
+    /* Print Styles — Harvard-format resume (black on white, serif, centered header,
+       all-caps section headings, right-aligned dates) for crisp PDF output */
     @media print {
+      @page {
+        size: letter;
+        margin: 0.7in 0.8in;
+      }
+
+      body,
+      body * {
+        font-family: 'Times New Roman', Times, serif !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
       body {
         background: #ffffff;
         color: #000000;
         padding: 0;
+        line-height: 1.35;
       }
 
-      .resume-top-bar {
+      /* Hide screen-only furniture */
+      .resume-top-bar,
+      .header-kicker,
+      .sec-num,
+      .cv-item-title img,
+      .lex-chat-widget,
+      .lex-chat-backdrop,
+      .lex-chat-trigger {
         display: none !important;
       }
 
@@ -359,89 +380,200 @@
         padding: 0;
       }
 
+      /* Centered header block: name, tagline, single contact line */
       .resume-header {
-        border-bottom: 1px solid #e0e0e0;
-        margin-bottom: 1.75rem;
-        padding-bottom: 1.25rem;
-      }
-
-      .header-kicker,
-      .meta-tag {
-        color: #666666;
+        text-align: center;
+        border-bottom: none;
+        margin-bottom: 1.1rem;
+        padding-bottom: 0.9rem;
       }
 
       .resume-name {
+        font-size: 22pt;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
         color: #000000;
       }
 
       .resume-subtitle {
-        color: #444444;
+        font-size: 10.5pt;
+        font-style: italic;
+        color: #000000;
+        max-width: 6.4in;
+        margin: 0 auto 0.55rem;
+        line-height: 1.4;
       }
 
-      .meta-value,
+      .resume-meta-grid {
+        display: block;
+        border-top: none;
+        padding-top: 0;
+        text-align: center;
+      }
+
+      .meta-pair {
+        display: inline;
+      }
+
+      .meta-tag {
+        display: none;
+      }
+
+      .meta-value {
+        display: inline;
+        font-size: 10pt;
+        color: #000000;
+      }
+
+      .meta-pair + .meta-pair::before {
+        content: "  \00B7  ";
+        color: #000000;
+      }
+
       .meta-value a {
-        color: #111111;
-        border-bottom-color: #cccccc;
+        color: #000000;
+        text-decoration: none;
+        border-bottom: none;
       }
 
+      /* All-caps centered section headings with rule */
       .cv-section {
-        margin-bottom: 1.75rem;
-        page-break-inside: avoid;
+        margin-bottom: 1rem;
       }
 
       .cv-section-heading {
-        color: #333333;
+        display: block;
+        text-align: center;
+        font-size: 12pt;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #000000;
+        border-bottom: 1px solid #000000;
+        padding-bottom: 0.15rem;
+        margin-bottom: 0.55rem;
       }
 
       .cv-section-heading::after {
-        background: #e0e0e0;
+        display: none;
       }
 
+      /* Entries: bold title left, date right; role italic; standard bullets */
       .cv-item {
-        border-bottom: 1px solid #f0f0f0;
-        margin-bottom: 1.25rem;
-        padding-bottom: 1.25rem;
+        border-bottom: none;
+        margin-bottom: 0.55rem;
+        padding-bottom: 0.55rem;
         page-break-inside: avoid;
       }
 
+      .cv-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        margin-bottom: 0;
+      }
+
+      .cv-item-title-row {
+        display: block;
+      }
+
       .cv-item-title {
+        display: inline;
+        font-size: 11.5pt;
+        font-weight: 700;
+        letter-spacing: 0;
         color: #000000;
       }
 
       .cv-item-badge {
-        background: #f5f5f5;
-        border-color: #dddddd;
-        color: #333333;
-      }
-
-      .cv-item-date,
-      .cv-item-sub {
-        color: #555555;
-      }
-
-      .cv-item-bullets {
-        color: #222222;
-      }
-
-      .cv-item-bullets li::before {
-        color: #888888;
-      }
-
-      .cv-item-bullets code {
-        background: #f0f0f0;
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 11pt;
+        font-weight: 400;
+        font-style: italic;
+        text-transform: none;
+        letter-spacing: 0;
         color: #000000;
       }
 
+      .cv-item-badge::before {
+        content: ", ";
+        margin-left: -0.25em;
+      }
+
+      .cv-item-date {
+        font-size: 10.5pt;
+        color: #000000;
+        white-space: nowrap;
+      }
+
+      .cv-item-sub {
+        font-size: 11pt;
+        font-style: italic;
+        color: #000000;
+        margin-bottom: 0.3rem;
+      }
+
+      .cv-item-bullets {
+        gap: 0.12rem;
+        font-size: 10.5pt;
+        line-height: 1.35;
+        color: #000000;
+      }
+
+      .cv-item-bullets li {
+        padding-left: 1.1em;
+      }
+
+      .cv-item-bullets li::before {
+        content: "\2022";
+        color: #000000;
+      }
+
+      .cv-item-bullets code {
+        font-family: inherit;
+        font-size: inherit;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        color: #000000;
+      }
+
+      /* Skills: "LABEL: values" lines, no boxes */
+      .skills-grid {
+        display: block;
+      }
+
       .skill-block {
-        border-color: #e5e5e5;
-        background: #fafafa;
+        border: none;
+        background: none;
+        padding: 0;
+        margin-bottom: 0.35rem;
       }
 
       .skill-label {
-        color: #555555;
+        display: inline;
+        font-size: 11pt;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 0;
+      }
+
+      .skill-label::after {
+        content: ": ";
       }
 
       .skill-values {
+        display: inline;
+        font-size: 11pt;
         color: #000000;
       }
     }
@@ -485,7 +617,7 @@
           <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
           <rect width="12" height="8" x="6" y="14" />
         </svg>
-        Print / PDF
+        Download PDF
       </button>
     </aside>
 
@@ -528,7 +660,7 @@
 
       <!-- 01 / Education -->
       <section class="cv-section" aria-labelledby="sec-education">
-        <h2 class="cv-section-heading" id="sec-education">01 / EDUCATION</h2>
+        <h2 class="cv-section-heading" id="sec-education"><span class="sec-num">01 /</span> EDUCATION</h2>
 
         <article class="cv-item">
           <div class="cv-item-header">
@@ -549,13 +681,13 @@
 
       <!-- 02 / Production Systems & Engineering -->
       <section class="cv-section" aria-labelledby="sec-projects">
-        <h2 class="cv-section-heading" id="sec-projects">02 / PRODUCTION SYSTEMS &amp; PROJECTS</h2>
+        <h2 class="cv-section-heading" id="sec-projects"><span class="sec-num">02 /</span> PROJECTS &amp; EXPERIENCE</h2>
 
         <article class="cv-item">
           <div class="cv-item-header">
             <div class="cv-item-title-row">
               <h3 class="cv-item-title">COE LGU Transparency &amp; Academic Portal</h3>
-              <span class="cv-item-badge">LIVE DEPLOYMENT</span>
+              <span class="cv-item-badge">Live Deployment</span>
             </div>
             <span class="cv-item-date">May 2025 - Present · coelgu-system.engineer</span>
           </div>
@@ -574,7 +706,7 @@
           <div class="cv-item-header">
             <div class="cv-item-title-row">
               <h3 class="cv-item-title">ChemLab Apparatus Borrowing &amp; Queue Management</h3>
-              <span class="cv-item-badge">CAMPUS DEPLOYED</span>
+              <span class="cv-item-badge">Campus Deployed</span>
             </div>
             <span class="cv-item-date">2026 · chemlab-system.me</span>
           </div>
@@ -591,7 +723,7 @@
           <div class="cv-item-header">
             <div class="cv-item-title-row">
               <h3 class="cv-item-title">Healthcare Smart Assistant / Medicine Dispenser</h3>
-              <span class="cv-item-badge">EMBEDDED HARDWARE</span>
+              <span class="cv-item-badge">Embedded Hardware</span>
             </div>
             <span class="cv-item-date">2025</span>
           </div>
@@ -608,7 +740,7 @@
           <div class="cv-item-header">
             <div class="cv-item-title-row">
               <h3 class="cv-item-title">eBarangay Citizen Services Portal</h3>
-              <span class="cv-item-badge">CIVIC TECH</span>
+              <span class="cv-item-badge">Civic Tech</span>
             </div>
             <span class="cv-item-date">2026 · Open Source</span>
           </div>
@@ -623,7 +755,7 @@
           <div class="cv-item-header">
             <div class="cv-item-title-row">
               <h3 class="cv-item-title">Capstone Compass &amp; Content Creation Manager</h3>
-              <span class="cv-item-badge">WEB &amp; DESKTOP</span>
+              <span class="cv-item-badge">Web &amp; Desktop</span>
             </div>
             <span class="cv-item-date">2026</span>
           </div>
@@ -637,7 +769,7 @@
 
       <!-- 03 / Technical Toolchain -->
       <section class="cv-section" aria-labelledby="sec-skills">
-        <h2 class="cv-section-heading" id="sec-skills">03 / TECHNICAL TOOLCHAIN</h2>
+        <h2 class="cv-section-heading" id="sec-skills"><span class="sec-num">03 /</span> TECHNICAL SKILLS</h2>
 
         <div class="skills-grid">
           <div class="skill-block">
@@ -661,13 +793,13 @@
 
       <!-- 04 / Media & Affiliations -->
       <section class="cv-section" aria-labelledby="sec-media">
-        <h2 class="cv-section-heading" id="sec-media">04 / CREATIVE PRACTICE &amp; LEADERSHIP</h2>
+        <h2 class="cv-section-heading" id="sec-media"><span class="sec-num">04 /</span> LEADERSHIP &amp; ACTIVITIES</h2>
 
         <article class="cv-item">
           <div class="cv-item-header">
             <div class="cv-item-title-row">
               <h3 class="cv-item-title"><img src="assets/img/focal-stack-logo.png" alt="Focal Stack" style="width:16px;height:16px;object-fit:contain;vertical-align:middle;margin-right:6px;">Focal Stack</h3>
-              <span class="cv-item-badge">FOUNDER &amp; CREATIVE DIRECTOR</span>
+              <span class="cv-item-badge">Founder &amp; Creative Director</span>
             </div>
             <span class="cv-item-date">2023 - Present · Davao Region</span>
           </div>
@@ -682,7 +814,7 @@
           <div class="cv-item-header">
             <div class="cv-item-title-row">
               <h3 class="cv-item-title">Student Publication</h3>
-              <span class="cv-item-badge">MEDIA SPECIALIST</span>
+              <span class="cv-item-badge">Media Specialist</span>
             </div>
             <span class="cv-item-date">Cor Jesu College · The Heartbeat</span>
           </div>
