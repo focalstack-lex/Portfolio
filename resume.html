@@ -337,12 +337,26 @@
       color: var(--text-primary);
     }
 
-    /* Print Styles — Harvard-format resume (black on white, serif, centered header,
-       all-caps section headings, right-aligned dates) for crisp PDF output */
+    /* Top-level @page declaration to force browsers (Chrome, Edge, Safari) to omit print headers & footers */
+    @page {
+      size: letter;
+      margin: 0 !important;
+    }
+
+    @page :first {
+      margin: 0 !important;
+    }
+
     @media print {
       @page {
         size: letter;
-        margin: 0;
+        margin: 0 !important;
+      }
+
+      html {
+        background: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
       body,
@@ -353,9 +367,10 @@
       }
 
       body {
-        background: #ffffff;
-        color: #000000;
-        padding: 0.6in 0.8in;
+        background: #ffffff !important;
+        color: #000000 !important;
+        margin: 0 !important;
+        padding: 0.6in 0.8in !important;
         line-height: 1.35;
       }
 
