@@ -1,5 +1,21 @@
 # Development Journal — Portfolio Lex
 
+## [2026-09-28] Client Readability Pass (portfolio.html, portfolio.css)
+
+### Summary
+- Hero lede plus GET IN TOUCH / VIEW RESUME (Tech) and GET IN TOUCH / OPEN FULL GALLERY (Create) links, so name, school and contact path sit above the fold instead of in section 03/04.
+- Section indices made sequential: Tech 01-04, Create 01-03 (previously skipped unnumbered sections).
+- Replaced emoji-prone glyphs (play, grid, close) with inline SVG icons.
+- Lightbox `data-caption` / `data-meta` aligned with the visible tile captions (they disagreed on titles and lens focal lengths).
+- Open Graph + canonical tags for link previews on Messenger/Facebook.
+- Mobile (<=580px): invisible 40px hit areas on links, 40px video HUD and carousel buttons, enlarged scrubber and dot hit zones, 9px floor on overlay labels (was 7.5px).
+- Copy: removed trailing ellipsis on "Stories in stillness and motion".
+
+### Verification
+- Local preview (`npx serve`, port 5177) at 375px and 1280px: `scrollWidth == innerWidth` (no horizontal overflow), hero lede visible above the fold (top 312px at 375px), smallest text 9px, lightbox caption reads "Ring Shots · Intimate Ceremony · 55mm ƒ/1.8", screenshot toggle still switches panes, zero glyphs remaining.
+- Console: only 404s are `/api/github-contributions` (Vercel function, unavailable locally, pre-existing).
+- Diff scanned for em/en dashes: none added.
+
 ## [2026-09-19] Print Styles Optimization for Resume PDF
 
 ### Summary

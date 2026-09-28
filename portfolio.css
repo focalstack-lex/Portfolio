@@ -3969,3 +3969,132 @@ body.is-presenter-mode .pres-slide.is-active {
   opacity: 1;
   transform: translate(-50%, -100%) translateY(-10px);
 }
+
+/* ---------------------------------------------------------------------------
+   CLIENT READABILITY PASS (2026-09-28)
+   Hero lede answers "who and how to reach" above the fold; mobile controls
+   meet the 40px touch floor and micro-labels stay at a legible 9px minimum.
+--------------------------------------------------------------------------- */
+.hero-lede {
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-top: 0.75rem;
+}
+
+.create-hero-flow .hero-lede,
+.create-hero-flow .hero-actions {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  transition: opacity 550ms var(--ease-smooth),
+              transform 550ms var(--ease-smooth);
+}
+
+.create-hero-flow.is-revealed .hero-lede,
+.create-hero-flow.is-revealed .hero-actions {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 540ms;
+}
+
+.cf-view-icon {
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .create-hero-flow .hero-lede,
+  .create-hero-flow .hero-actions {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero-lede {
+    font-size: 15px;
+  }
+
+  .cf-view-btn,
+  .crossfade-badge {
+    font-size: 9px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .cf-vhud-btn {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .cf-vhud-scrub {
+    position: relative;
+  }
+
+  .cf-vhud-scrub::after {
+    content: "";
+    position: absolute;
+    inset: -16px 0;
+  }
+
+  .cf-dot {
+    position: relative;
+  }
+
+  .cf-dot::after {
+    content: "";
+    position: absolute;
+    inset: -17px;
+  }
+
+  .cf-nav-btn {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  /* Invisible hit area: taps land without moving the underline or layout */
+  .action-link,
+  .cta-switch-link,
+  .footer-links a,
+  .gh-card-link,
+  .cta-email,
+  .cta-email-sub a {
+    position: relative;
+  }
+
+  .action-link::after,
+  .cta-switch-link::after,
+  .footer-links a::after,
+  .gh-card-link::after,
+  .cta-email::after,
+  .cta-email-sub a::after {
+    content: "";
+    position: absolute;
+    inset: -11px -4px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 1.4rem 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Keep hero links as underlined text, not the stacked project-action rows */
+  .hero-actions .action-link {
+    width: auto;
+    display: inline-block;
+    padding: 2px 0;
+    border-bottom: 1px solid currentColor;
+  }
+}
