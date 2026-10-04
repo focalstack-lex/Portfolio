@@ -1,0 +1,12 @@
+# Keep source-only and oversized originals out of the deployment
+.agents
+.claude
+.kilo
+.playwright-mcp
+build
+docs
+AGENTS.md
+JOURNAL.md
+assets/photos/profile/bnw.jpg
+assets/photos/profile/colored.jpg
+assets/projects/coelgu/coelgu-demo.mov
