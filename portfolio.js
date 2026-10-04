@@ -358,6 +358,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const lbClose = document.getElementById("lb-close");
 
   if (lightbox && lbImg && lbCap) {
+    // Tile that opened the viewer, so keyboard focus can return to it on close
+    let lastTrigger = null;
+
     photoTiles.forEach((tile) => {
       tile.addEventListener("click", () => {
         const img = tile.querySelector("img");
@@ -369,6 +372,8 @@ document.addEventListener("DOMContentLoaded", () => {
           lbImg.alt = img.alt || caption;
           lbCap.textContent = meta ? `${caption} · ${meta}` : caption;
           lightbox.removeAttribute("hidden");
+          lastTrigger = tile;
+          if (lbClose) lbClose.focus();
 
           requestAnimationFrame(() => {
             requestAnimationFrame(() => {
@@ -384,6 +389,8 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         lightbox.setAttribute("hidden", "");
         lbImg.src = "";
+        if (lastTrigger) lastTrigger.focus();
+        lastTrigger = null;
       }, 260);
     };
 
