@@ -1,11 +1,12 @@
 # Portfolio - Lex Matondo
 
-**Live:** https://lex-portfolio-swart.vercel.app · **Repo:** https://github.com/CodeWithLex/Portfolio
+**Live:** https://lex-portfolio-swart.vercel.app · **Repo:** https://github.com/focalstack-lex/Portfolio
 
-Two pages:
+Pages:
 
-1. **`index.html` - Hero entry.** Dark glass card, JetBrains Mono + Inter, GSAP motion. **Explore Work** leads to the main portfolio.
-2. **`portfolio.html` - Main portfolio.** Monochrome (white on obsidian) system: floating rounded shell, sticky pill nav, Space Grotesk hero with glass app mockup, bento grid, photography gallery with filter + lightbox, light methodology section, watermark footer.
+1. **`index.html` - Entry split.** Two panels, TECH and CREATE, each opening the main portfolio in that mode.
+2. **`portfolio.html` - Main portfolio.** Monochrome editorial system (white on obsidian). Tech mode: hero intro, COE student portal case study with video and screenshots, other work, stack, about, GitHub activity. Create mode: about, filterable photo archive with lightbox, production gear.
+3. **`gallery.html` - Full shoot archive.** `resume.html` - printable CV. `404.html` - branded not-found page.
 
 No build step - plain HTML/CSS/JS.
 
@@ -58,6 +59,8 @@ The chatbot is wired to a Vercel Serverless Function (`/api/chat`) that supports
 - `portfolio.html` / `portfolio.css` / `portfolio.js` - main portfolio page
 - `gallery.html` / `gallery.css` / `gallery.js` - photography gallery archive
 - `chatbot.css` / `chatbot.js` - floating AI portfolio assistant widget
+- `vercel.json` - security and cache headers; `.vercelignore` - keeps docs and oversized originals out of deploys
+- `robots.txt` / `sitemap.xml` - search indexing
 - `api/chat.js` - Vercel serverless function for AI completions
 - `docs/lex-bio.md` & `assets/data/lex-profile.json` - verified knowledge base about Lex Matondo
 - `docs/superpowers/specs/` - build specs mapping decisions to the design docs

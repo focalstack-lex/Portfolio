@@ -1,5 +1,20 @@
 # Development Journal — Portfolio Lex
 
+## [2026-10-04] Share, Search, Deploy and Accessibility Hardening
+
+### Summary
+- Open Graph and canonical tags on index, gallery and resume pages.
+- `robots.txt` and `sitemap.xml` (5 public pages, `/api/` disallowed).
+- `vercel.json`: nosniff, Referrer-Policy, SAMEORIGIN framing, Permissions-Policy, 7-day cache on `/assets/`.
+- `.vercelignore`: docs, tooling and unused originals (bnw.jpg, colored.jpg, coelgu-demo.mov, about 22 MB) no longer deployed.
+- Removed dead/mistyped `<source>` children from the showcase video (the `src` attribute already served the MP4).
+- Photo lightbox moves focus to the close button on open and back to the tile on close.
+- Branded `404.html`; README rewritten to match the current site and repo URL.
+
+### Verification
+- `python` XML parse of sitemap.xml and JSON parse of vercel.json passed; `node --check portfolio.js` passed.
+- Checked that nothing at runtime fetches `docs/` or the excluded originals before ignoring them.
+
 ## [2026-09-28] Client Readability Pass (portfolio.html, portfolio.css)
 
 ### Summary
