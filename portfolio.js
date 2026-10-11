@@ -299,6 +299,11 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("is-active");
 
       const selectedCategory = btn.getAttribute("data-filter");
+      // A filtered subset drops the editorial spans so the grid closes without holes
+      const photoGrid = document.getElementById("gallery");
+      const setFilteredLayout = () => {
+        if (photoGrid) photoGrid.classList.toggle("is-filtered", selectedCategory !== "all");
+      };
 
       if (prefersReducedMotion) {
         photoTiles.forEach((tile) => {
@@ -306,6 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const match = (selectedCategory === "all" || tileCategory === selectedCategory);
           tile.classList.toggle("is-hidden", !match);
         });
+        setFilteredLayout();
         isFiltering = false;
         return;
       }
@@ -321,6 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         // Step 2: Toggle hidden states and animate in matching tiles
+        setFilteredLayout();
         let delayIndex = 0;
         photoTiles.forEach((tile) => {
           const tileCategory = tile.getAttribute("data-cat");

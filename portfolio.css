@@ -7,11 +7,12 @@
   --bg-primary: #050505;
   --bg-secondary: #111111;
   --text-primary: #f2f2f0;
-  --text-muted: #999999;
+  --text-muted: #a1a19e;
+  --text-faint: #787875;
   --border: rgba(255, 255, 255, 0.14);
   --border-subtle: rgba(255, 255, 255, 0.08);
 
-  --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-main: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
   --max-width: 1080px;
@@ -109,35 +110,6 @@ button {
 
 .site-brand:hover {
   opacity: 0.85;
-}
-
-.focal-badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 9999px;
-  padding: 4px 12px 4px 6px;
-  margin-bottom: 0.95rem;
-  width: fit-content;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.focal-badge-logo {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-}
-
-.focal-badge-text {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  color: var(--text-primary);
-  text-transform: uppercase;
 }
 
 .mode-switch-group {
@@ -3685,7 +3657,7 @@ body.is-presenter-mode .pres-slide.is-active {
   border-radius: 12px;
   padding: 12px 18px;
   color: #f2f2f0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-main);
   font-size: 13px;
   line-height: 1.4;
   z-index: 999999;
@@ -4096,5 +4068,171 @@ body.is-presenter-mode .pres-slide.is-active {
     display: inline-block;
     padding: 2px 0;
     border-bottom: 1px solid currentColor;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   SEVERUS DESIGN PASS (2026-10-11)
+   Applies docs/DESIGN_REFERENCE.md: three-step warm grey ladder, reading order
+   name > detail > metadata, space before boxes, controls only where clickable.
+--------------------------------------------------------------------------- */
+
+/* Reading order: metadata columns recede behind the project or skill name */
+.archive-year {
+  color: var(--text-faint);
+}
+
+.archive-item:hover .archive-year,
+.archive-item:focus-visible .archive-year {
+  color: var(--text-muted);
+}
+
+/* Static rows are information, not controls: no hover shift on non-links */
+div.archive-item:hover {
+  padding-left: 0;
+  background: transparent;
+}
+
+div.archive-item:hover .archive-col-title,
+div.archive-item:hover .archive-tech {
+  transform: none;
+}
+
+/* Case study: grouping by space and one hairline, not three rows of boxes */
+.cs-summary-grid {
+  gap: 2.5rem;
+}
+
+.cs-details-grid,
+.cs-metrics-row {
+  gap: 2rem;
+}
+
+.cs-card,
+.cs-detail-item,
+.cs-metric {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  border-radius: 0;
+  padding: 1.25rem 0 0;
+}
+
+.cs-card:hover,
+.cs-detail-item:hover,
+.cs-metric:hover {
+  background: transparent;
+  border-color: var(--border-subtle);
+}
+
+.cs-card-tag,
+.cs-detail-num,
+.cs-label {
+  color: var(--text-faint);
+}
+
+.cs-detail-title {
+  font-size: 14px;
+}
+
+.cs-detail-desc {
+  font-size: 13px;
+}
+
+/* Facts row reads label first, matching the about meta list */
+.cs-metric {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.cs-metric-value {
+  font-size: 13px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.cs-metric-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-faint);
+}
+
+/* Photo grid: 3 columns on wide screens so the archive reads in about one
+   third of the scroll it took at 2 columns */
+@media (min-width: 1024px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    grid-auto-flow: dense;
+    gap: 1rem;
+  }
+
+  .photo-tile.tile-tall {
+    grid-row: span 2;
+  }
+
+  .photo-grid.is-filtered .photo-tile {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .photo-tile img,
+  .photo-tile.tile-tall img {
+    aspect-ratio: auto;
+    height: 100%;
+    /* Faces sit in the upper third; keep them inside the wide crops */
+    object-position: center 28%;
+  }
+}
+
+/* Depth comes from hairlines, not heavy shadows */
+.photo-tile:hover {
+  box-shadow: none;
+}
+
+/* Gallery hand-off: a hairline row and an underlined text link, not a filled box */
+.gallery-open-banner,
+.gallery-open-banner:hover {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  border-radius: 0;
+  padding: 2rem 0 0;
+}
+
+.banner-tag {
+  color: var(--text-faint);
+}
+
+.banner-link {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 0 0 2px;
+  border-bottom: 1px solid var(--text-primary);
+  border-radius: 0;
+}
+
+.banner-link:hover {
+  opacity: 0.7;
+  transform: none;
+}
+
+@media (max-width: 860px) {
+  .gallery-open-banner {
+    padding: 1.75rem 0 0;
+  }
+
+  .banner-link {
+    width: auto;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  /* Short facts pair up instead of stacking one per screen row */
+  .cs-metrics-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
   }
 }

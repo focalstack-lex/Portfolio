@@ -1,5 +1,24 @@
 # Development Journal — Portfolio Lex
 
+## [2026-10-11] Severus Design Pass (portfolio, landing, gallery, 404)
+
+### Summary
+- Typography: Geist replaces Inter as the voice face on portfolio, index, gallery, 404 and the chatbot; JetBrains Mono stays for data. Follows Typography Anti-Slop (Inter headlines at 700 are the generated-page tell).
+- Grey ladder: muted `#999999` to warm `#a1a19e`, new `--text-faint: #787875` for years, category tags and case study labels, so reading order runs name > detail > metadata.
+- Removed the "FOCAL STACK // CODE x CREATE" eyebrow pill above the Create heading (Anti-Eyebrow-Pill Directive) and its CSS.
+- Case study de-boxed: problem/solution, features and facts use one hairline plus space instead of three rows of filled cards. Unverifiable metrics ("100% Fund Visibility", "0 Unverified Edits") replaced with facts from docs/portfolio-content.md (domain, sign-in restriction, 1.0-5.0 scale, CSV import).
+- Photo grid: 3 columns at 1024px and up, 300px rows, upper-third crop bias; 8 photos now 1248px tall instead of 3626px. Filtered views drop spans so rows close without holes. Removed the heavy hover shadow.
+- Gallery hand-off: removed the duplicate top "EXPLORE ALL SHOOTS" button; end-of-grid banner is now a hairline row with an underlined link instead of a filled box and white button.
+- Non-clickable stack and gear rows lost `tabindex="0"` and their hover shift (11 rows).
+- Footer headline: "LET'S BUILD SOMETHING REAL."
+- docs/design-system-prompt.md updated to the new font and grey rules.
+
+### Verification
+- Browser preview at 1280px and 375px: `document.fonts` reports Geist 400-700 and JetBrains Mono loaded; no horizontal overflow on portfolio or landing at 375px.
+- Grid geometry measured: all view 4 rows no holes; wedding, portraits and christening filters each one uniform row.
+- Contrast: muted 7.87:1, faint 4.60:1 on `#050505`.
+- `node --check portfolio.js` passed. Console errors limited to `/api/github-contributions` 404 (Vercel-only function).
+
 ## [2026-10-04] Share, Search, Deploy and Accessibility Hardening
 
 ### Summary

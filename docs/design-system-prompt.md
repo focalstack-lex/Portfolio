@@ -11,7 +11,7 @@ You are designing for **Lex Matondo** - a personal portfolio for a Computer Engi
 ### Color - strict monochrome, no exceptions
 
 - Background base: `#050505` (near-black), elevated surfaces `#111111`
-- Primary text: `#F2F2F0` (warm off-white), muted text: `#999999`
+- Primary text: `#F2F2F0` (warm off-white), muted text: `#A1A19E` (7.9:1 on canvas), faint text: `#787875` (4.6:1 on canvas, canvas only) for indices, years and metadata. Three-step warm ladder shared with the Severus app
 - Hairline borders: `rgba(255,255,255,0.14)` standard, `rgba(255,255,255,0.08)` subtle
 - Hover/interaction states are brightness shifts only: surfaces get white overlays in 2-8% steps (`rgba(255,255,255,0.02)` → `0.08`), borders brighten toward `0.28`, text goes muted → off-white, or elements dim to 0.7-0.85 opacity. **Never introduce color to signal state.**
 - Text selection inverts: white background, black text
@@ -19,10 +19,10 @@ You are designing for **Lex Matondo** - a personal portfolio for a Computer Engi
 
 ### Typography
 
-- Two fonts only: **Inter** (400/500/600/700) for all UI and body copy; **JetBrains Mono** (400/500) exclusively for labels, indices, metadata, timestamps, and technical annotations
+- Two fonts only: **Geist** (400/500/600/700) for all UI, body copy and headings (the voice face, shared with Severus; Inter-set headlines are the generated-page signature); **JetBrains Mono** (400/500) exclusively for labels, indices, metadata, timestamps, and technical annotations
 - Body: 15px, line-height 1.6
 - Micro-labels ("eyebrows"): JetBrains Mono, 10-12px, uppercase, wide tracking `0.12em-0.22em`, muted gray. These label everything - sections, cards, badges, tags
-- Headings: Inter 700, fluid `clamp()` sizing, tight negative tracking (`-0.02em` to `-0.04em`), line-height 0.95-1.1. Large display headings are allowed to feel dense and confident
+- Headings: Geist 700, fluid `clamp()` sizing, tight negative tracking (`-0.02em` to `-0.04em`), line-height 0.95-1.1. Large display headings are allowed to feel dense and confident
 - Sections are numbered like an editorial index in mono ("01 /", "02 /") - quiet, not decorative
 
 ### Layout & composition
@@ -62,7 +62,7 @@ You are designing for **Lex Matondo** - a personal portfolio for a Computer Engi
 - No accent colors, no gradients as decoration, no colored shadows, no colored badges
 - No large border radii on content cards (pills are the only round elements besides dots/avatars)
 - No heavy drop shadows - depth comes from `#111111` fills, blur, and hairlines
-- No emoji-as-UI, no decorative illustration, no fonts outside Inter + JetBrains Mono
+- No emoji-as-UI, no decorative illustration, no fonts outside Geist + JetBrains Mono; no decorative eyebrow pills above headings; no invented metrics, facts only
 - No motion without a reduced-motion fallback
 
 When producing anything visual for this brand - a new page, component, mockup, or diagram - hold every element against the monochrome rule first, the editorial typographic scale second, and the shutter-wipe motion language third.
