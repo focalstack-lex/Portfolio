@@ -82,3 +82,11 @@
 ### Verification
 - Playwright on a local `serve` of the repo at 1440, 1280, 1024, 768, 375 and 320 px: no horizontal overflow, no broken images, no console errors or failed requests, every link and button at least 40 px, Atkinson Hyperlegible Next loaded (h1 56px at desktop, 40px on phones). Screenshots compared with the Figma frames.
 - Every SVG under `tote/assets` parses as XML; installer SHA-256 matches the Tote release build; secret scan, dash and emoji check clean; `vercel.json` parses.
+
+## [2026-10-14] Tote page: shorter mobile scroll
+
+### Summary
+- Lex reported long scrolls on phones (stacked tall feature and step cards). Below 900px the three features and the three install steps are now compact rows (badge or number beside the text, 16px padding, 19px and 17px titles); phone section spacing is tighter (band, Clean up, install card); the SHA-256 line is folded into a "Check the file (SHA-256)" disclosure (native details element, 44px tap target, no JavaScript).
+
+### Verification
+- Playwright at 1440, 1280, 1024, 768, 375 and 320px: no overflow, no broken images, no console errors or failed requests, no tap target under 40px. Page height at 375px went from 4305px to 3626px, at 768px from 3894px to 3431px; mobile screenshots reviewed.

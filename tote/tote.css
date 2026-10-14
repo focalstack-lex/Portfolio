@@ -543,7 +543,17 @@ a { color: inherit; }
   text-align: center;
 }
 .checksum { max-width: 100%; overflow-wrap: anywhere; }
-.checksum code { font-family: var(--mono); font-size: 12px; }
+.checksum summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 8px;
+  cursor: pointer;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.checksum code { display: block; font-family: var(--mono); font-size: 12px; }
 .steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -598,10 +608,28 @@ a { color: inherit; }
   .desktop-break { display: none; }
 }
 
+/* One column from here down, so features and steps become compact rows:
+   the badge or number sits beside the text instead of above it. */
 @media (max-width: 899px) {
-  .feature-grid, .steps { grid-template-columns: minmax(0, 1fr); }
-  .feature-grid { gap: 16px; }
-  .steps { gap: 12px; }
+  .feature-grid, .steps { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+
+  .feature,
+  .step {
+    display: grid;
+    align-items: start;
+    column-gap: 14px;
+    row-gap: 4px;
+    padding: 16px;
+  }
+  .feature { grid-template-columns: 44px minmax(0, 1fr); }
+  .step { grid-template-columns: 32px minmax(0, 1fr); }
+
+  .icon-badge { grid-row: span 2; width: 44px; height: 44px; border-radius: var(--radius-md); }
+  .feature .display-h3 { font-size: 19px; line-height: 1.3; letter-spacing: 0; }
+  .feature p { font-size: 15px; line-height: 1.5; }
+
+  .step-number { grid-row: span 2; width: 32px; height: 32px; }
+  .step-title { font-size: 17px; }
 }
 
 /* Phone layout, from Mobile 375. */
@@ -618,16 +646,20 @@ a { color: inherit; }
   .file-row.is-third { display: none; }
   .filed-chip { left: 16px; top: 312px; }
 
-  .band { gap: 32px; padding: 40px 24px; }
+  .hero { padding-bottom: 48px; }
 
+  .band { gap: 24px; padding: 32px 16px; }
+  .band-heading { padding-inline: 4px; }
+
+  .cleanup { padding-top: 56px; padding-bottom: 32px; }
   .cleanup-card { padding: 20px 16px; }
   .suggestion { padding: 14px 12px; gap: 10px; }
   .suggestion-icon { display: none; }
 
-  .install { padding-top: 48px; }
-  .install-card { padding: 40px 20px; gap: 32px; }
+  .install { padding-top: 32px; }
+  .install-card { padding: 32px 16px; gap: 24px; }
+  .install-head { gap: 12px; padding-inline: 4px; }
   .install-head .btn { width: 100%; }
-  .step { padding: 20px; }
 
   .footer { flex-direction: column; align-items: flex-start; gap: 12px; padding-top: 40px; padding-bottom: 32px; }
 }
