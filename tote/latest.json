@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "notes": "Tote can now update itself. When a new version is out, a banner offers Update now.",
+  "pub_date": "2026-10-14T04:13:53.700Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSGNoeFQ2cnZJUGlyUk1udTA4SkRPM09VZWdDYmhrSXNHM1VOTHcrTVE5TGY2UU9qQ2dVcEcyN2ZYVUNSa3NhTk83Qk54MVd6UTlYR0hIamN5ZWVSQnFDaW9QclhRSFFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxOTUxMjMzCWZpbGU6VG90ZV8wLjIuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjAKMWxMQjBFME9rL3hDYi9wNG5seUxWZ3AxVEdsK28ybTkxRWk0YmRaU0ZLSmVrTzhKR1d2dHBtcjlPNy83QjBSR240K043OFdWclZIanRNRjNkTjIwRFE9PQo=",
+      "url": "https://www.codewithlex.site/tote/download/Tote_0.2.0_x64-setup.exe"
+    }
+  }
+}

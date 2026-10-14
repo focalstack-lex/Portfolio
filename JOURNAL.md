@@ -90,3 +90,14 @@
 
 ### Verification
 - Playwright at 1440, 1280, 1024, 768, 375 and 320px: no overflow, no broken images, no console errors or failed requests, no tap target under 40px. Page height at 375px went from 4305px to 3626px, at 768px from 3894px to 3431px; mobile screenshots reviewed.
+
+## [2026-10-14] Tote 0.2.0 and the update manifest
+
+### Summary
+- Published Tote 0.2.0 with `npm run release` from the Tote repo: `tote/download/Tote_0.2.0_x64-setup.exe` (5,230,251 bytes, SHA-256 2d1686696d8334eefcf8c512576a4f3a50748592d3b9afbc38d1bf6e02e6d235) replaces 0.1.0, and the page's file name, version, size and checksum were updated by the script.
+- New `tote/latest.json`: the manifest every installed Tote (0.2.0 and later) reads at most once a day; it carries the version, release notes, download URL and the installer's updater signature (public). `vercel.json` gives it a 5-minute cache.
+- Privacy copy now matches the app: "No account, no ads. Your files never leave the laptop.", "New versions install with one click.", and the footer says Tote only goes online to check for new versions. Same text updated in the Figma file.
+
+### Verification
+- Secret scan: the updater private key is not in the repo; only the public signature is published. `vercel.json` parses.
+- Tote 0.2.0 native check 15/15 (dry runs never go online); live end-to-end update verification recorded in the Tote repo journal.
