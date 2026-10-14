@@ -7,6 +7,7 @@ Pages:
 1. **`index.html` - Entry split.** Two panels, TECH and CREATE, each opening the main portfolio in that mode.
 2. **`portfolio.html` - Main portfolio.** Monochrome editorial system (white on obsidian). Tech mode: hero intro, COE student portal case study with video and screenshots, other work, stack, about, GitHub activity. Create mode: about, filterable photo archive with lightbox, production gear.
 3. **`gallery.html` - Full shoot archive.** `resume.html` - printable CV. `404.html` - branded not-found page.
+4. **`tote/` - Tote product page** at `/tote`. Download page for Tote, the Windows file finder for teachers: its own Atkinson Hyperlegible Next type and green palette, no JavaScript, a strict CSP from `vercel.json`, and the installer served from `tote/download/`. To ship a new Tote version, replace the installer there and update the file name, size and SHA-256 in `tote/index.html`.
 
 No build step - plain HTML/CSS/JS.
 

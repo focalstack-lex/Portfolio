@@ -69,3 +69,16 @@
 
 ### Verification
 - Verified HTML markup in `resume.html`, `portfolio.html`, and `portfolio-code.html`.
+
+## [2026-10-14] Tote product page at /tote
+
+### Summary
+- Added `tote/` as an extension page of the portfolio (www.codewithlex.site/tote) instead of a new domain. Built from the "Tote Website" Figma file (Desktop 1440 and Mobile 375 frames): nav, hero with a Find screen mock, feature band, Clean up and privacy section, install card with three steps, footer. Plain HTML and CSS, no JavaScript.
+- Assets live under `tote/assets/`: the official Tote logo (`tote-logo.svg`, master in the Tote repo `brand/`), app icon favicons, 19 interface icons exported from the design, and Atkinson Hyperlegible Next (400 to 800) self-hosted with its SIL OFL license (`fonts/OFL.txt`).
+- The installer is served from `tote/download/Tote_0.1.0_x64-setup.exe` (4,266,036 bytes). Because it is unsigned, the page shows its SHA-256 (8d5c3812c8f19c2fbfe373a565fe7b4757f73722df98ddbd6344c510ca57b852) under the download button, and the steps explain the SmartScreen prompt.
+- `vercel.json`: rewrite `/tote` to `/tote/index.html` (the site has no clean URLs), a strict Content-Security-Policy on `/tote` paths only (`script-src 'none'`, self-hosted styles, images and fonts), a one-week cache on `/tote/assets`, and `Content-Disposition: attachment` with `application/octet-stream` on `/tote/download`. Every page asset uses an absolute `/tote/...` path so `/tote` works with or without a trailing slash.
+- `sitemap.xml` gains the `/tote` URL (same host as the existing entries); README lists the page and how to ship a new Tote version.
+
+### Verification
+- Playwright on a local `serve` of the repo at 1440, 1280, 1024, 768, 375 and 320 px: no horizontal overflow, no broken images, no console errors or failed requests, every link and button at least 40 px, Atkinson Hyperlegible Next loaded (h1 56px at desktop, 40px on phones). Screenshots compared with the Figma frames.
+- Every SVG under `tote/assets` parses as XML; installer SHA-256 matches the Tote release build; secret scan, dash and emoji check clean; `vercel.json` parses.

@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon/folderInput">
+<path id="Vector" d="M2 9V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H7.9C8.23449 2.99672 8.56445 3.07739 8.8597 3.23462C9.15495 3.39185 9.40604 3.62062 9.59 3.9L10.4 5.1C10.5821 5.37653 10.83 5.60352 11.1215 5.7606C11.413 5.91769 11.7389 5.99995 12.07 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V18C22 18.5304 21.7893 19.0391 21.4142 19.4142C21.0391 19.7893 20.5304 20 20 20H4C3.51319 20.0045 3.04148 19.8312 2.67328 19.5127C2.30509 19.1942 2.0657 18.7524 2 18.27" stroke="#1F6B4A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M2 13H12" stroke="#1F6B4A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M9 16L12 13L9 10" stroke="#1F6B4A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
