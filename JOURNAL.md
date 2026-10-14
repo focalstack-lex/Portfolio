@@ -109,3 +109,13 @@
 
 ### Verification
 - Evidence gathered from source line numbers, live headers (no Set-Cookie on /tote or latest.json), computed contrast ratios, the updater crate source (user agent), and the Tote repo's dependencies.
+
+## [2026-10-14] /copyright fix all on the Tote page, Tote 0.2.1
+
+### Summary
+- Added `/tote/privacy` and `/tote/license` (footer links on every Tote page; the nav is unchanged), `tote/assets/icons/LICENSE.txt`, `tote/third-party-notices.txt` (8 npm and 338 Rust packages, generated from Tote's dependency graph). Darker faint grey for captions (4.77:1). Heading "Old files stay put until you say so.", "text PDFs", "Windows 11 (Windows 10 not yet tested)". `vercel.json` rewrites for the two pages; `reports` excluded from deploys.
+- Published Tote 0.2.1 with `npm run release` (installer now carries LICENSE.txt and THIRD-PARTY-NOTICES.txt): 5,263,213 bytes, SHA-256 cc6471cbcf4852d827eef6472b27717c10eb688b9e132e79f443b351090f3a09; latest.json updated. Figma copy matches.
+- Fix table and updated scorecard appended to `reports/copyright/2026-10-14-1227.md`.
+
+### Verification
+- Playwright across the three pages at 1440, 768, 375 and 320 px: clean after a `code` wrap fix and a caption specificity fix. Tote 0.2.1 native check 15/15.

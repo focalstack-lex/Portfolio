@@ -43,6 +43,8 @@
     }
   ],
   "rewrites": [
-    { "source": "/tote", "destination": "/tote/index.html" }
+    { "source": "/tote", "destination": "/tote/index.html" },
+    { "source": "/tote/privacy", "destination": "/tote/privacy/index.html" },
+    { "source": "/tote/license", "destination": "/tote/license/index.html" }
   ]
 }

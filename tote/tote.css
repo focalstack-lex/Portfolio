@@ -19,7 +19,8 @@
   --border-strong: #b9c6bd;
   --text-primary: #17201b;
   --text-muted: #4f5c55;
-  --text-faint: #6b7872;
+  /* Darker than the app's faint grey so 13px captions pass 4.5:1 on the canvas (4.77:1). */
+  --text-faint: #616d67;
   --accent: #1f6b4a;
   --accent-hover: #185a3d;
   --accent-soft: #dcebe2;
@@ -597,6 +598,51 @@ a { color: inherit; }
 .brand-small .brand-logo { width: 25px; height: 28px; }
 .brand-small .brand-name { font-size: 15px; line-height: 1.3; letter-spacing: 0; }
 .footer a:not(.brand) { color: var(--accent-text); font-weight: 600; }
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Privacy and license pages */
+.doc {
+  max-width: calc(760px + 2 * var(--gutter));
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+.doc h1 { margin-bottom: 8px; }
+.doc .updated { margin-bottom: 32px; }
+.doc h2 {
+  margin: 40px 0 12px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+}
+.doc p, .doc li { font-size: 17px; line-height: 1.6; color: var(--text-primary); }
+.doc p + p,
+.doc ul + p { margin-top: 12px; }
+.doc p.caption { font-size: 13px; line-height: 1.4; color: var(--text-faint); }
+.doc ul { list-style: disc; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.doc a { color: var(--accent-text); font-weight: 600; }
+/* Paths and URLs have no spaces; let them wrap on a phone. */
+.doc code { font-family: var(--mono); font-size: 0.9em; overflow-wrap: anywhere; }
+.doc .lead { color: var(--text-muted); }
+.doc pre {
+  margin: 16px 0 0;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 
 /* Below 1200px there is no room for copy and mock side by side. */
 @media (max-width: 1199px) {
@@ -662,6 +708,8 @@ a { color: inherit; }
   .install-head .btn { width: 100%; }
 
   .footer { flex-direction: column; align-items: flex-start; gap: 12px; padding-top: 40px; padding-bottom: 32px; }
+  .footer-meta { align-items: flex-start; }
+  .doc { padding-top: 16px; }
 }
 
 /* Extra-small phones: keep the chip inside the screen. */
