@@ -119,3 +119,9 @@
 
 ### Verification
 - Playwright across the three pages at 1440, 768, 375 and 320 px: clean after a `code` wrap fix and a caption specificity fix. Tote 0.2.1 native check 15/15.
+
+## [2026-10-14] Tote 0.3.0 published
+- `npm run release` in the Tote repo staged Tote 0.3.0 (the To do list): `tote/download/Tote_0.3.0_x64-setup.exe` (5,345,970 bytes, SHA-256 b2fdaffa00fe1de81bcb8554acffbac6f4e792e2ddb67bfe8246994f8d2308d5), `tote/latest.json` (version 0.3.0, signed), page name, size, version and checksum updated, 0.2.1 installer removed. Committed 5eb2ab0, pushed, `vercel deploy --prod` (Ready).
+
+### Verification
+- Live: `latest.json` reports 0.3.0 with the 0.3.0 URL; the installer downloads (HTTP 200, 5,345,970 bytes) with the SHA-256 above; the page shows version 0.3.0 and the new checksum; the old 0.2.1 path is 404; CSP, HSTS and nosniff headers present. Tote native check 18/18 on this build.
