@@ -1,11 +1,11 @@
 {
-  "version": "0.2.1",
-  "notes": "Tote now includes its license and the notices of the open source software it uses.",
-  "pub_date": "2026-10-14T04:37:26.197Z",
+  "version": "0.3.0",
+  "notes": "New To do list: tasks with due dates, repeats and attached files, and one reminder on the morning a task is due.",
+  "pub_date": "2026-10-14T07:09:56.239Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSGNoeFQ2cnZJUHJtaW54YVhaVEt2ZUk5MVRURzJUQTNUS3lEZ1pXd0g4VHp2UlFCNEcxTWNmRDRLTEhaSnJmS0Nod1c4YTdXOWpnNzRIVURlc0dLMDVJZjhVMUxWM3dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxOTUyNjQ2CWZpbGU6VG90ZV8wLjIuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjEKOUJGRmM2R0JhYm9YNTlQYXdIUTNISWZNSDViU0pKaEhRQUFESU5sd1BGRTRYdlJ1bXMzSklkVTJYcFpyWmRwZGpHUHlIYlFtM1VZL0hsczNhcEY1Q1E9PQo=",
-      "url": "https://www.codewithlex.site/tote/download/Tote_0.2.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSGNoeFQ2cnZJUGlERkZ3RFAwWlhGcjdJbDFTaWx3N1YycEt4QXJrNUdUMWNaZWI1VTVvb2hqanJOY2pjQzMzcEUwQlFqTW5BdmxLOWNidHlUbGlGQTArUXJCWnNjTWdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxOTYxNzk2CWZpbGU6VG90ZV8wLjMuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjAKTXo1UGNJMUxMNjVJRHZsbUNubVRtZm1JeE9Gb0lWWnZDVWR0ZGk0U1JjZE9MVjFUVzY1V1RGNUpTaFZrKzhMOUYzWkhSWTl5cnYvVmNiZnJ2bkU3RHc9PQo=",
+      "url": "https://www.codewithlex.site/tote/download/Tote_0.3.0_x64-setup.exe"
     }
   }
 }
