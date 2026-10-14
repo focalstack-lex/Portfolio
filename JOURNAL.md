@@ -101,3 +101,11 @@
 ### Verification
 - Secret scan: the updater private key is not in the repo; only the public signature is published. `vercel.json` parses.
 - Tote 0.2.0 native check 15/15 (dry runs never go online); live end-to-end update verification recorded in the Tote repo journal.
+
+## [2026-10-14] /copyright audit of the Tote page
+
+### Summary
+- Ran the /copyright skill against `tote/` (page, assets, installer, headers). Report: `reports/copyright/2026-10-14-1227.md`. No P0. P1: no privacy notice now that the app checks codewithlex.site daily; no license or terms for the download. P2: open source notices missing in the installer and for the Lucide icons on the page; captions at 4.08:1 contrast on the canvas; the "Nothing moves until you say so" heading contradicts automatic filing. P3: scanned-PDF caveat, Windows 10 unverified, optional trademark line, `reports/` not in `.vercelignore`. Overall 7.3/10. No code changed; fixes wait for `/copyright fix`.
+
+### Verification
+- Evidence gathered from source line numbers, live headers (no Set-Cookie on /tote or latest.json), computed contrast ratios, the updater crate source (user agent), and the Tote repo's dependencies.
