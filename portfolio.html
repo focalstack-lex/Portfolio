@@ -52,6 +52,7 @@
       </div>
 
       <nav class="site-nav" aria-label="Main Navigation">
+        <a href="#systems">SYSTEMS</a>
         <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
         <a href="resume.html" target="_blank" rel="noopener">RESUME</a>
@@ -290,69 +291,539 @@
           </div>
         </section>
 
-        <!-- Compact Project Archive Index -->
-        <section class="project-archive archive-flow" id="archive-section" aria-labelledby="archive-heading">
-          <h3 class="archive-heading label-slide-left" id="archive-heading">02 / OTHER WORK</h3>
-          <div class="archive-index">
+        <!-- 02 / Featured Systems & Architecture (Tote, OctoReach, Severus) -->
+        <section class="featured-systems-section archive-flow" id="systems" aria-labelledby="systems-heading">
+          <div class="systems-header-block">
+            <h3 class="systems-heading label-slide-left" id="systems-heading">02 / FEATURED SYSTEMS &amp; ARCHITECTURE</h3>
+            <p class="systems-subheading">
+              Production platforms, native desktop utilities, and distributed software engineered with type safety, clean systems architecture, and sub-second execution.
+            </p>
+          </div>
 
-            <a class="archive-item" href="https://chemlab-system.me" target="_blank" rel="noopener">
-              <div class="archive-col-title">
-                <span class="archive-name">ChemLab Apparatus System <span class="archive-arrow">↗</span></span>
-                <span class="archive-sub">Laboratory apparatus queue &amp; QR verification</span>
-              </div>
-              <span class="archive-tech">PHP · MySQL · QR Auth</span>
-              <span class="archive-year">2026</span>
-            </a>
+          <!-- Category Filter Bar (Hairline Segmented Controls - Zero AI Pills) -->
+          <div class="systems-filter-bar" role="tablist" aria-label="System Category Filter">
+            <button type="button" class="systems-filter-btn is-active" data-category-filter="all" role="tab" aria-selected="true">
+              ALL SYSTEMS <span class="systems-filter-count">(8)</span>
+            </button>
+            <button type="button" class="systems-filter-btn" data-category-filter="desktop" role="tab" aria-selected="false">
+              DESKTOP &amp; RUST <span class="systems-filter-count">(3)</span>
+            </button>
+            <button type="button" class="systems-filter-btn" data-category-filter="web" role="tab" aria-selected="false">
+              WEB PLATFORMS <span class="systems-filter-count">(4)</span>
+            </button>
+            <button type="button" class="systems-filter-btn" data-category-filter="hardware" role="tab" aria-selected="false">
+              HARDWARE &amp; EMBEDDED <span class="systems-filter-count">(1)</span>
+            </button>
+          </div>
 
-            <a class="archive-item" href="https://capstone-compass-client.vercel.app/" target="_blank" rel="noopener">
-              <div class="archive-col-title">
-                <span class="archive-name">Capstone Compass <span class="archive-arrow">↗</span></span>
-                <span class="archive-sub">AI capstone advisor, project scoping &amp; scaffold generator</span>
-              </div>
-              <span class="archive-tech">React · TypeScript · Gemini AI</span>
-              <span class="archive-year">2026</span>
-            </a>
+          <!-- Systems Grid (Tote, OctoReach, Severus) -->
+          <div class="systems-grid">
 
-            <div class="archive-item">
-              <div class="archive-col-title">
-                <span class="archive-name">Automated Medicine Dispenser</span>
-                <span class="archive-sub">Healthcare smart assistant &amp; actuator hardware</span>
-              </div>
-              <span class="archive-tech">Arduino C++ · Java Swing</span>
-              <span class="archive-year">2026</span>
-            </div>
+            <!-- 01. Tote (Teacher's Desktop Manager) -->
+            <article class="system-card reveal-on-scroll" data-category="desktop" id="system-tote">
+              <header class="system-card-header">
+                <div class="system-meta-row">
+                  <span class="system-category-label">DESKTOP &amp; RUST</span>
+                  <span class="system-year-label">2026</span>
+                </div>
+                <h4 class="system-card-title">Tote: Teacher's Desktop File Manager</h4>
+                <p class="system-card-desc">
+                  Finds a teacher's files and files the ones she sends it with one right-click. Built to eliminate desktop file clutter in Philippine school environments with zero learning curve.
+                </p>
+                <div class="system-tech-row">
+                  <span class="system-tech-tag">Tauri v2</span>
+                  <span class="system-tech-tag">Rust</span>
+                  <span class="system-tech-tag">React</span>
+                  <span class="system-tech-tag">TypeScript</span>
+                  <span class="system-tech-tag">Vite</span>
+                  <span class="system-tech-tag">SQLite</span>
+                </div>
+              </header>
 
-            <a class="archive-item" href="https://github.com/CodeWithLex/eBarangay-Portal" target="_blank"
-              rel="noopener">
-              <div class="archive-col-title">
-                <span class="archive-name">eBarangay Citizen Portal <span class="archive-arrow">↗</span></span>
-                <span class="archive-sub">Digital document requests &amp; civic governance</span>
-              </div>
-              <span class="archive-tech">JavaScript · REST API</span>
-              <span class="archive-year">2026</span>
-            </a>
+              <!-- Snippet Deck (Preview, Code, Specs) -->
+              <div class="snippet-deck" role="region" aria-label="Tote System Snippet Deck">
+                <div class="snippet-deck-bar">
+                  <div class="snippet-deck-tabs" role="tablist">
+                    <button type="button" class="snippet-tab-btn is-active" data-snippet-tab="preview" role="tab" aria-selected="true">
+                      UI PREVIEW
+                    </button>
+                    <button type="button" class="snippet-tab-btn" data-snippet-tab="code" role="tab" aria-selected="false">
+                      CODE ARCHITECTURE
+                    </button>
+                    <button type="button" class="snippet-tab-btn" data-snippet-tab="specs" role="tab" aria-selected="false">
+                      SYSTEM SPECS
+                    </button>
+                  </div>
+                  <span class="snippet-deck-hint">INTERACTIVE SNIPPET</span>
+                </div>
 
-            <a class="archive-item" href="https://reviewer-coach.onrender.com" target="_blank" rel="noopener">
-              <div class="archive-col-title">
-                <span class="archive-name">PMAEE CadetCoach <span class="archive-arrow">↗</span></span>
-                <span class="archive-sub">Cloud-hosted military entrance exam preparation</span>
-              </div>
-              <span class="archive-tech">Node.js · Render Cloud</span>
-              <span class="archive-year">2026</span>
-            </a>
+                <div class="snippet-deck-body">
+                  <!-- Panel 1: Preview -->
+                  <div class="snippet-panel is-active" data-panel-type="preview" role="tabpanel">
+                    <div class="snippet-preview-wrap">
+                      <div class="snippet-window-chrome">
+                        <div class="window-dots">
+                          <span class="window-dot"></span>
+                          <span class="window-dot"></span>
+                          <span class="window-dot"></span>
+                        </div>
+                        <span class="window-file-title">tote.exe - Find a File</span>
+                      </div>
+                      <div class="snippet-img-box" data-inspect-sys="tote" title="Click to enlarge UI snippet">
+                        <img class="snippet-img" src="assets/projects/tote/find-clean.png" alt="Tote desktop search and smart filing interface" loading="lazy">
+                        <div class="snippet-zoom-overlay">
+                          <span class="snippet-zoom-badge">INSPECT FULLSCREEN ↗</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-            <a class="archive-item" href="https://github.com/CodeWithLex/Content-Creation-Manager" target="_blank"
-              rel="noopener">
-              <div class="archive-col-title">
-                <span class="archive-name">Content Creation Manager <span class="archive-arrow">↗</span></span>
-                <span class="archive-sub">Standalone asset organizer &amp; preset parser</span>
+                  <!-- Panel 2: Code -->
+                  <div class="snippet-panel" data-panel-type="code" role="tabpanel" aria-hidden="true">
+                    <div class="snippet-code-wrap">
+                      <div class="snippet-code-chrome">
+                        <div class="snippet-code-info">
+                          <span class="snippet-file-tag">src-tauri/src/filing.rs</span>
+                          <span class="snippet-lang-tag">Rust</span>
+                        </div>
+                        <button type="button" class="snippet-copy-btn" aria-label="Copy code snippet">COPY</button>
+                      </div>
+                      <div class="snippet-code-scroll">
+                        <pre><code><span class="syn-cm">// Shell integration: single-instance batch queue with 800ms debounce</span>
+<span class="syn-kw">pub const</span> ARG: &amp;<span class="syn-ty">str</span> = <span class="syn-str">"--move-to-tote"</span>;
+<span class="syn-kw">pub const</span> SORTED_EVENT: &amp;<span class="syn-ty">str</span> = <span class="syn-str">"tote://sorted"</span>;
+<span class="syn-kw">const</span> GATHER: <span class="syn-ty">Duration</span> = Duration::from_millis(<span class="syn-num">800</span>);
+
+<span class="syn-kw">pub fn</span> <span class="syn-fn">requested</span>(args: &amp;[<span class="syn-ty">String</span>]) -&gt; <span class="syn-ty">Vec</span>&lt;<span class="syn-ty">PathBuf</span>&gt; {
+    <span class="syn-kw">let</span> Some(at) = args.iter().position(|a| a == ARG) <span class="syn-kw">else</span> { <span class="syn-kw">return</span> Vec::new() };
+    args[at + <span class="syn-num">1</span>..].iter().map(PathBuf::from).filter(|p| p.is_absolute()).collect()
+}
+
+<span class="syn-kw">pub async fn</span> <span class="syn-fn">file_batch</span>(paths: <span class="syn-ty">Vec</span>&lt;<span class="syn-ty">PathBuf</span>&gt;, db: &amp;<span class="syn-ty">Db</span>) -&gt; <span class="syn-ty">Result</span>&lt;BatchSummary, ToteError&gt; {
+    <span class="syn-kw">let mut</span> filed = Vec::new();
+    <span class="syn-kw">for</span> path <span class="syn-kw">in</span> paths {
+        <span class="syn-kw">let</span> destination = organize::destination_for(&amp;path, &amp;db.rules)?;
+        ops::atomic_move(&amp;path, &amp;destination)?;
+        db.record_activity(&amp;path, &amp;destination)?;
+        filed.push(destination);
+    }
+    Ok(BatchSummary { filed, timestamp: Utc::now() })
+}</code></pre>
+                      </div>
+                      <div class="snippet-code-caption">
+                        Windows File Explorer right-click integration passing selected files to Tote's single-instance IPC handler with atomic file movement and undo tracking.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Panel 3: Specs -->
+                  <div class="snippet-panel" data-panel-type="specs" role="tabpanel" aria-hidden="true">
+                    <div class="snippet-specs-wrap">
+                      <div class="specs-grid">
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 01</span>
+                          <span class="spec-title">Shell Context Integration</span>
+                          <p class="spec-desc">Native Windows Explorer right-click command (--move-to-tote) communicating through single-instance named pipes.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 02</span>
+                          <span class="spec-title">Atomic Batch Gathering</span>
+                          <p class="spec-desc">800ms debounce gathering Explorer process bursts into unified batch operations with single-click Undo all.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 03</span>
+                          <span class="spec-title">Zero-Latency File Search</span>
+                          <p class="spec-desc">Indexed SQLite filesystem cache supporting instant fuzzy search by filename, student name, or DepEd order date.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 04</span>
+                          <span class="spec-title">Background Tray Daemon</span>
+                          <p class="spec-desc">Ultra-lightweight system tray resident process providing instant window recall, status notifications, and auto-cleanup.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <span class="archive-tech">Java Swing · File I/O</span>
-              <span class="archive-year">2025</span>
-            </a>
+
+              <footer class="system-card-footer">
+                <div class="system-action-group">
+                  <button type="button" class="system-link-btn primary" data-inspect-sys="tote">INSPECT SYSTEM →</button>
+                  <a class="system-link-btn" href="https://github.com/focalstack-lex/Teacher-s-Personal-Assistant" target="_blank" rel="noopener">SOURCE REPO ↗</a>
+                </div>
+              </footer>
+            </article>
+
+            <!-- 02. OctoReach (Dynamic NFC Profile Gateway) -->
+            <article class="system-card reveal-on-scroll" data-category="web" id="system-octoreach">
+              <header class="system-card-header">
+                <div class="system-meta-row">
+                  <span class="system-category-label">WEB PLATFORMS</span>
+                  <span class="system-year-label">2026</span>
+                </div>
+                <h4 class="system-card-title">OctoReach: Dynamic NFC Profile &amp; Hardware Gateway</h4>
+                <p class="system-card-desc">
+                  Decouples physical NFC chips from static URLs via an intelligent hardware routing gateway (/c/[card_id]). Physical cards are reprogrammable without rewriting chip memory, serving sub-second SSR mobile profiles with 1-tap vCard exports and lead capture.
+                </p>
+                <div class="system-tech-row">
+                  <span class="system-tech-tag">Next.js 15</span>
+                  <span class="system-tech-tag">React 19</span>
+                  <span class="system-tech-tag">TypeScript</span>
+                  <span class="system-tech-tag">Tailwind CSS v4</span>
+                  <span class="system-tech-tag">Prisma ORM</span>
+                  <span class="system-tech-tag">NextAuth v5</span>
+                  <span class="system-tech-tag">SQLite</span>
+                </div>
+              </header>
+
+              <!-- Snippet Deck (Preview, Code, Specs) -->
+              <div class="snippet-deck" role="region" aria-label="OctoReach System Snippet Deck">
+                <div class="snippet-deck-bar">
+                  <div class="snippet-deck-tabs" role="tablist">
+                    <button type="button" class="snippet-tab-btn is-active" data-snippet-tab="preview" role="tab" aria-selected="true">
+                      UI PREVIEW
+                    </button>
+                    <button type="button" class="snippet-tab-btn" data-snippet-tab="code" role="tab" aria-selected="false">
+                      CODE ARCHITECTURE
+                    </button>
+                    <button type="button" class="snippet-tab-btn" data-snippet-tab="specs" role="tab" aria-selected="false">
+                      SYSTEM SPECS
+                    </button>
+                  </div>
+                  <span class="snippet-deck-hint">INTERACTIVE SNIPPET</span>
+                </div>
+
+                <div class="snippet-deck-body">
+                  <!-- Panel 1: Preview -->
+                  <div class="snippet-panel is-active" data-panel-type="preview" role="tabpanel">
+                    <div class="snippet-preview-wrap">
+                      <div class="snippet-window-chrome">
+                        <div class="window-dots">
+                          <span class="window-dot"></span>
+                          <span class="window-dot"></span>
+                          <span class="window-dot"></span>
+                        </div>
+                        <span class="window-file-title">octoreach.app - Live Hardware Routing Studio</span>
+                      </div>
+                      <div class="snippet-img-box" data-inspect-sys="octoreach" title="Click to enlarge UI snippet">
+                        <img class="snippet-img" src="assets/projects/octoreach/dashboard.png" alt="OctoReach live card router and mobile phone simulator" loading="lazy">
+                        <div class="snippet-zoom-overlay">
+                          <span class="snippet-zoom-badge">INSPECT FULLSCREEN ↗</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Panel 2: Code -->
+                  <div class="snippet-panel" data-panel-type="code" role="tabpanel" aria-hidden="true">
+                    <div class="snippet-code-wrap">
+                      <div class="snippet-code-chrome">
+                        <div class="snippet-code-info">
+                          <span class="snippet-file-tag">src/app/c/[card_id]/page.tsx</span>
+                          <span class="snippet-lang-tag">TypeScript</span>
+                        </div>
+                        <button type="button" class="snippet-copy-btn" aria-label="Copy code snippet">COPY</button>
+                      </div>
+                      <div class="snippet-code-scroll">
+                        <pre><code><span class="syn-cm">// Dynamic hardware NFC redirect router: resolves chip ID without rewriting card memory</span>
+<span class="syn-kw">import</span> { redirect, notFound } <span class="syn-kw">from</span> <span class="syn-str">"next/navigation"</span>;
+<span class="syn-kw">import</span> { prisma } <span class="syn-kw">from</span> <span class="syn-str">"@/lib/prisma"</span>;
+
+<span class="syn-kw">export default async function</span> <span class="syn-fn">NfcCardRedirectPage</span>({
+  params,
+}: {
+  params: <span class="syn-ty">Promise</span>&lt;{ card_id: <span class="syn-ty">string</span> }&gt;;
+}) {
+  <span class="syn-kw">const</span> { card_id } = <span class="syn-kw">await</span> params;
+
+  <span class="syn-kw">const</span> card = <span class="syn-kw">await</span> prisma.nfcCard.findUnique({
+    where: { cardId: card_id },
+    include: { profile: <span class="syn-kw">true</span> },
+  });
+
+  <span class="syn-kw">if</span> (!card) {
+    redirect(<span class="syn-str">`/dashboard/cards?unrecognized=${encodeURIComponent(card_id)}`</span>);
+  }
+
+  <span class="syn-kw">if</span> (card.isActive &amp;&amp; card.profile) {
+    redirect(<span class="syn-str">`/${card.profile.username}`</span>);
+  }
+
+  redirect(<span class="syn-str">`/dashboard/cards?claim=${encodeURIComponent(card_id)}`</span>);
+}</code></pre>
+                      </div>
+                      <div class="snippet-code-caption">
+                        Hardware router resolving physical card ID lookups on the edge, routing NFC taps to active user profiles with dynamic claim verification.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Panel 3: Specs -->
+                  <div class="snippet-panel" data-panel-type="specs" role="tabpanel" aria-hidden="true">
+                    <div class="snippet-specs-wrap">
+                      <div class="specs-grid">
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 01</span>
+                          <span class="spec-title">Decoupled NFC Hardware Router</span>
+                          <p class="spec-desc">Physical NFC tags route through /c/[card_id], allowing re-pairing to different profiles at any time without re-writing chip memory.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 02</span>
+                          <span class="spec-title">Sub-Second Mobile SSR</span>
+                          <p class="spec-desc">Next.js 15 App Router server-rendered profiles (/p/[username]) optimized for instant loads even on crowded conference networks.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 03</span>
+                          <span class="spec-title">1-Tap Native vCard Export</span>
+                          <p class="spec-desc">Direct .vcf generation downloads contacts directly into iOS and Android address books with zero app install required.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 04</span>
+                          <span class="spec-title">2-Way Lead Capture Inbox</span>
+                          <p class="spec-desc">Visitors can submit their details back to the card owner in real time, storing verified networking leads in the studio dashboard.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <footer class="system-card-footer">
+                <div class="system-action-group">
+                  <button type="button" class="system-link-btn primary" data-inspect-sys="octoreach">INSPECT SYSTEM →</button>
+                  <a class="system-link-btn" href="https://github.com/CodeWithLex/eBarangay-Portal" target="_blank" rel="noopener">VIEW REPO ↗</a>
+                </div>
+              </footer>
+            </article>
+
+            <!-- 03. Project Severus (Living Intelligence Workspace) -->
+            <article class="system-card reveal-on-scroll" data-category="desktop" id="system-severus">
+              <header class="system-card-header">
+                <div class="system-meta-row">
+                  <span class="system-category-label">DESKTOP &amp; RUST</span>
+                  <span class="system-year-label">2026</span>
+                </div>
+                <h4 class="system-card-title">Project Severus: Living Intelligence Workspace</h4>
+                <p class="system-card-desc">
+                  A personal intelligence workspace and second-brain knowledge graph. Computes real-time PageRank centrality and 45-day freshness decay over markdown vaults, rendering an interactive 3D WebGL topology alongside a native desktop markdown editor.
+                </p>
+                <div class="system-tech-row">
+                  <span class="system-tech-tag">Tauri v2</span>
+                  <span class="system-tech-tag">Rust</span>
+                  <span class="system-tech-tag">React</span>
+                  <span class="system-tech-tag">Three.js WebGL</span>
+                  <span class="system-tech-tag">Python stdlib</span>
+                  <span class="system-tech-tag">PageRank</span>
+                </div>
+              </header>
+
+              <!-- Snippet Deck (Preview, Code, Specs) -->
+              <div class="snippet-deck" role="region" aria-label="Severus System Snippet Deck">
+                <div class="snippet-deck-bar">
+                  <div class="snippet-deck-tabs" role="tablist">
+                    <button type="button" class="snippet-tab-btn is-active" data-snippet-tab="preview" role="tab" aria-selected="true">
+                      UI PREVIEW
+                    </button>
+                    <button type="button" class="snippet-tab-btn" data-snippet-tab="code" role="tab" aria-selected="false">
+                      CODE ARCHITECTURE
+                    </button>
+                    <button type="button" class="snippet-tab-btn" data-snippet-tab="specs" role="tab" aria-selected="false">
+                      SYSTEM SPECS
+                    </button>
+                  </div>
+                  <span class="snippet-deck-hint">INTERACTIVE SNIPPET</span>
+                </div>
+
+                <div class="snippet-deck-body">
+                  <!-- Panel 1: Preview -->
+                  <div class="snippet-panel is-active" data-panel-type="preview" role="tabpanel">
+                    <div class="snippet-preview-wrap">
+                      <div class="snippet-window-chrome">
+                        <div class="window-dots">
+                          <span class="window-dot"></span>
+                          <span class="window-dot"></span>
+                          <span class="window-dot"></span>
+                        </div>
+                        <span class="window-file-title">severus.exe - 3D Topological Knowledge Graph</span>
+                      </div>
+                      <div class="snippet-img-box" data-inspect-sys="severus" title="Click to enlarge UI snippet">
+                        <img class="snippet-img" src="assets/projects/severus/graph-view.png" alt="Severus real-time 3D WebGL knowledge graph" loading="lazy">
+                        <div class="snippet-zoom-overlay">
+                          <span class="snippet-zoom-badge">INSPECT FULLSCREEN ↗</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Panel 2: Code -->
+                  <div class="snippet-panel" data-panel-type="code" role="tabpanel" aria-hidden="true">
+                    <div class="snippet-code-wrap">
+                      <div class="snippet-code-chrome">
+                        <div class="snippet-code-info">
+                          <span class="snippet-file-tag">second-brain/build_graph.py</span>
+                          <span class="snippet-lang-tag">Python</span>
+                        </div>
+                        <button type="button" class="snippet-copy-btn" aria-label="Copy code snippet">COPY</button>
+                      </div>
+                      <div class="snippet-code-scroll">
+                        <pre><code><span class="syn-cm"># Mathematical PageRank &amp; Freshness Decay Engine (Zero dependencies)</span>
+HALF_LIFE_DAYS = <span class="syn-num">45.0</span>  <span class="syn-cm"># Note brightness halves roughly every 45 days</span>
+DAMPING = <span class="syn-num">0.85</span>
+ITERATIONS = <span class="syn-num">100</span>
+
+<span class="syn-kw">def</span> <span class="syn-fn">compute_freshness</span>(mtime: <span class="syn-ty">float</span>, now: <span class="syn-ty">float</span>) -&gt; <span class="syn-ty">float</span>:
+    age_days = max(<span class="syn-num">0.0</span>, (now - mtime) / <span class="syn-num">86400.0</span>)
+    <span class="syn-kw">return</span> math.exp(-<span class="syn-num">0.69315</span> * age_days / HALF_LIFE_DAYS)
+
+<span class="syn-kw">def</span> <span class="syn-fn">compute_pagerank</span>(nodes: <span class="syn-ty">list</span>[<span class="syn-ty">str</span>], edges: <span class="syn-ty">dict</span>) -&gt; <span class="syn-ty">dict</span>[<span class="syn-ty">str</span>, <span class="syn-ty">float</span>]:
+    n = len(nodes)
+    rank = {node: <span class="syn-num">1.0</span> / n <span class="syn-kw">for</span> node <span class="syn-kw">in</span> nodes}
+    <span class="syn-kw">for</span> _ <span class="syn-kw">in</span> range(ITERATIONS):
+        new_rank = {node: (<span class="syn-num">1.0</span> - DAMPING) / n <span class="syn-kw">for</span> node <span class="syn-kw">in</span> nodes}
+        <span class="syn-kw">for</span> (src, dst), weight <span class="syn-kw">in</span> edges.items():
+            new_rank[dst] += DAMPING * rank[src] * weight
+        rank = new_rank
+    <span class="syn-kw">return</span> rank</code></pre>
+                      </div>
+                      <div class="snippet-code-caption">
+                        Mathematical graph computation measuring bi-directional link centrality and half-life freshness decay over markdown knowledge vaults.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Panel 3: Specs -->
+                  <div class="snippet-panel" data-panel-type="specs" role="tabpanel" aria-hidden="true">
+                    <div class="snippet-specs-wrap">
+                      <div class="specs-grid">
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 01</span>
+                          <span class="spec-title">Interactive 3D WebGL Network</span>
+                          <p class="spec-desc">Real-time force-directed topology powered by Three.js with dynamic node radii proportional to computed PageRank centrality.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 02</span>
+                          <span class="spec-title">Sub-Millisecond Rust Engine</span>
+                          <p class="spec-desc">Native desktop graph computation coupled to a notify debounced filesystem watcher for instantaneous vault indexing.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 03</span>
+                          <span class="spec-title">Freshness Decay Protocol</span>
+                          <p class="spec-desc">45-day half-life decay highlighting actively evolving thoughts while gently fading dormant nodes in 3D space.</p>
+                        </div>
+                        <div class="spec-item">
+                          <span class="spec-num">SPEC 04</span>
+                          <span class="spec-title">Command Palette &amp; Wiki-Links</span>
+                          <p class="spec-desc">Global Ctrl+J quick-capture journal palette with bi-directional [[wiki-link]] resolution and inline hashtag parsing.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <footer class="system-card-footer">
+                <div class="system-action-group">
+                  <button type="button" class="system-link-btn primary" data-inspect-sys="severus">INSPECT SYSTEM →</button>
+                  <a class="system-link-btn" href="https://github.com/focalstack-lex/Project-Severus" target="_blank" rel="noopener">EXPLORE REPO ↗</a>
+                </div>
+              </footer>
+            </article>
 
           </div>
+
+          <!-- Compact Systems Index (Additional Engineering Work) -->
+          <div class="archive-flow" style="margin-top: 4rem;">
+            <h3 class="archive-heading label-slide-left">ADDITIONAL SYSTEMS &amp; RESEARCH ARCHIVE</h3>
+            <div class="archive-index">
+
+              <a class="archive-item" href="https://chemlab-system.me" target="_blank" rel="noopener" data-category="web">
+                <div class="archive-col-title">
+                  <span class="archive-name">ChemLab Apparatus System <span class="archive-arrow">↗</span></span>
+                  <span class="archive-sub">Laboratory apparatus queue &amp; QR verification</span>
+                </div>
+                <span class="archive-tech">PHP · MySQL · QR Auth</span>
+                <span class="archive-year">2026</span>
+              </a>
+
+              <a class="archive-item" href="https://capstone-compass-client.vercel.app/" target="_blank" rel="noopener" data-category="web">
+                <div class="archive-col-title">
+                  <span class="archive-name">Capstone Compass <span class="archive-arrow">↗</span></span>
+                  <span class="archive-sub">AI capstone advisor, project scoping &amp; scaffold generator</span>
+                </div>
+                <span class="archive-tech">React · TypeScript · Gemini AI</span>
+                <span class="archive-year">2026</span>
+              </a>
+
+              <div class="archive-item" data-category="hardware">
+                <div class="archive-col-title">
+                  <span class="archive-name">Automated Medicine Dispenser</span>
+                  <span class="archive-sub">Healthcare smart assistant &amp; actuator hardware</span>
+                </div>
+                <span class="archive-tech">Arduino C++ · Java Swing</span>
+                <span class="archive-year">2026</span>
+              </div>
+
+              <a class="archive-item" href="https://github.com/CodeWithLex/eBarangay-Portal" target="_blank" rel="noopener" data-category="web">
+                <div class="archive-col-title">
+                  <span class="archive-name">eBarangay Citizen Portal <span class="archive-arrow">↗</span></span>
+                  <span class="archive-sub">Digital document requests &amp; civic governance</span>
+                </div>
+                <span class="archive-tech">React · Tailwind · Supabase</span>
+                <span class="archive-year">2026</span>
+              </a>
+
+              <a class="archive-item" href="https://reviewer-coach.onrender.com" target="_blank" rel="noopener" data-category="web">
+                <div class="archive-col-title">
+                  <span class="archive-name">PMAEE CadetCoach <span class="archive-arrow">↗</span></span>
+                  <span class="archive-sub">Cloud-hosted military entrance exam preparation</span>
+                </div>
+                <span class="archive-tech">Node.js · Render Cloud</span>
+                <span class="archive-year">2026</span>
+              </a>
+
+              <a class="archive-item" href="https://github.com/CodeWithLex/Content-Creation-Manager" target="_blank" rel="noopener" data-category="desktop">
+                <div class="archive-col-title">
+                  <span class="archive-name">Content Creation Manager <span class="archive-arrow">↗</span></span>
+                  <span class="archive-sub">Standalone asset organizer &amp; preset parser</span>
+                </div>
+                <span class="archive-tech">Java Swing · File I/O</span>
+                <span class="archive-year">2025</span>
+              </a>
+
+            </div>
+          </div>
         </section>
+
+        <!-- System Inspection Modal Dialog -->
+        <div class="system-inspect-modal" id="system-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <div class="system-modal-backdrop" aria-hidden="true"></div>
+          <div class="system-modal-dialog">
+            <header class="system-modal-header">
+              <div class="system-modal-title-wrap">
+                <span class="system-modal-category">SYSTEM SPECIFICATION</span>
+                <h3 class="system-modal-title" id="modal-title">System Name</h3>
+              </div>
+              <button type="button" class="system-modal-close-btn" aria-label="Close dialog">ESC ✕</button>
+            </header>
+            <div class="system-modal-body">
+              <img class="system-modal-img" id="modal-img" src="" alt="System interface preview">
+              <div class="system-modal-details-grid">
+                <div class="system-modal-card">
+                  <span class="system-modal-card-title">PROJECT PURPOSE</span>
+                  <p class="system-modal-card-text" id="modal-desc"></p>
+                </div>
+                <div class="system-modal-card">
+                  <span class="system-modal-card-title">SYSTEM ARCHITECTURE</span>
+                  <p class="system-modal-card-text" id="modal-arch"></p>
+                </div>
+              </div>
+              <div class="system-modal-actions">
+                <a class="system-link-btn primary" id="modal-link-source" href="#" target="_blank" rel="noopener">VIEW SOURCE REPO ↗</a>
+                <a class="system-link-btn" id="modal-link-live" href="#" target="_blank" rel="noopener">OPEN LIVE SYSTEM ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- 02 / Technical Stack & Toolchain -->
         <section class="project-archive archive-flow reveal-on-scroll" id="tech-stack"

@@ -134,3 +134,31 @@
 ## 2026-10-19: Tote files removed
 
 - The Tote product page now lives only at https://totedesk.website, so removed the portfolio's `tote/` folder and the dead Tote-specific headers and rewrites. The `/tote` and `/tote/*` redirects stay, so installed 0.3.0 copies still reach the 0.4.0 manifest.
+
+## [2026-10-19] Featured Systems & Architecture Pass (Tote, OctoReach, Severus)
+
+### Summary
+- Upgraded the portfolio's project section from a flat archive list into a comprehensive interactive systems showcase under `02 / FEATURED SYSTEMS & ARCHITECTURE`.
+- Prominently featured three flagship systems:
+  - **Tote: Teacher's Desktop File Manager**: Tauri v2, Rust native backend, React, TypeScript, SQLite. Windows Explorer context menu hook (`--move-to-tote`), single-instance IPC, 800ms debounce batch queue.
+  - **OctoReach: Dynamic NFC Profile & Hardware Gateway**: Next.js 15 App Router, React 19, TypeScript, Tailwind CSS v4, Prisma, NextAuth. Decoupled physical NFC router (`/c/[card_id]`), sub-second mobile SSR profiles, native 1-tap vCard export, and live 2-way lead capture.
+  - **Project Severus: Living Intelligence Workspace**: Tauri v2, Rust native backend, React, Three.js WebGL, Python stdlib. Real-time 3D topological knowledge graph, sub-millisecond PageRank calculation engine with `notify` filesystem watcher, and 45-day freshness decay.
+- Integrated interactive snippet decks for each flagship project featuring three switcher tabs:
+  - **UI PREVIEW**: Obsidian window frame displaying high-resolution screenshots (`find-clean.png`, `dashboard.png`, `graph-view.png`) with zoom inspection triggers.
+  - **CODE ARCHITECTURE**: Real, syntax-highlighted code blocks with line numbers, language tags, and single-click copy buttons (`Rust`, `TypeScript`, `Python`).
+  - **SYSTEM SPECS**: 4-point architectural specifications detailing shell integration, mathematical decay, hardware routing, and performance constraints.
+- Built a fullscreen System Inspection Modal Dialog supporting deep-dive review with accessible ESC key closing, outside-click backdrop handling, and scroll lock.
+- Added a segmented category filter bar supporting `ALL SYSTEMS (8)`, `DESKTOP & RUST (3)`, `WEB PLATFORMS (4)`, and `HARDWARE & EMBEDDED (1)`.
+- Reorganized additional research and systems archive below flagship cards (COE LGU Portal, ChemLab Apparatus System, Capstone Compass, Automated Medicine Dispenser, eBarangay Portal, PMAEE CadetCoach, and Content Creation Manager).
+- Added `SYSTEMS` link to the site navigation header.
+- Maintained strict adherence to zero-emoji, zero-em-dash, anti-eyebrow-pill, and anti-pill design standards.
+
+### Verification
+- Tested locally on Python HTTP server (port 4321) using the browser subagent (`portfolio_systems_verify`).
+- Verified all 3 snippet tabs (UI PREVIEW, CODE ARCHITECTURE, SYSTEM SPECS) toggle active states correctly.
+- Verified code snippet copy button functionality with visual `COPIED` state transitions.
+- Verified system inspection modal opens with full details and dismisses cleanly via `ESC` key.
+- Verified category filter segments correctly filter cards between Desktop, Web, and Hardware.
+- Verified zero console errors and zero broken images.
+- Scanned HTML, CSS, and JS for em-dashes and emojis (zero matches).
+
