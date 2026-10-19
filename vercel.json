@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/tote", "destination": "https://totedesk.website/", "permanent": true },
+    { "source": "/tote/(.*)", "destination": "https://totedesk.website/$1", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
