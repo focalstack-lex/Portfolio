@@ -125,3 +125,8 @@
 
 ### Verification
 - Live: `latest.json` reports 0.3.0 with the 0.3.0 URL; the installer downloads (HTTP 200, 5,345,970 bytes) with the SHA-256 above; the page shows version 0.3.0 and the new checksum; the old 0.2.1 path is 404; CSP, HSTS and nosniff headers present. Tote native check 18/18 on this build.
+
+## 2026-10-19: Tote moved to totedesk.website
+
+- The Tote product page moved out of this portfolio into the Tote repository's `site/` folder, served at https://totedesk.website. Added permanent redirects for `/tote` and `/tote/*` to the new domain so installed 0.3.0 copies that still read `codewithlex.site/tote/latest.json` can reach the 0.4.0 manifest. Commit a857230, pushed, `vercel deploy --prod` (Ready in 14s).
+- Verified live: `/tote`, `/tote/latest.json`, `/tote/download/Tote_0.3.0_x64-setup.exe`, `/tote/privacy` and `/tote/license` all return 308 to `https://totedesk.website/...`; following them returns 200 (manifest 775 bytes, installer 5,345,970 bytes); the portfolio root still returns 200.
