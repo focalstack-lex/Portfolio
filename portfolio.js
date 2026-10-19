@@ -1353,4 +1353,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize real-time GitHub activity
     initGitHubContributions();
+
+    // 4. Back to Top Button Controller
+    function initBackToTop() {
+      const btn = document.getElementById("back-to-top");
+      if (!btn) return;
+
+      let ticking = false;
+      const onScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            if (window.scrollY > 480) {
+              btn.classList.add("is-visible");
+            } else {
+              btn.classList.remove("is-visible");
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    // 5. Active Scroll Spy Navigation
+    function initScrollSpy() {
+      const navLinks = document.querySelectorAll(".site-nav .nav-link");
+      if (!navLinks.length) return;
+
+      const sections = [
+        { id: "work", el: document.getElementById("work") },
+        { id: "systems", el: document.getElementById("systems") },
+        { id: "about", el: document.getElementById("about") },
+        { id: "contact", el: document.getElementById("contact") }
+      ].filter((s) => s.el !== null);
+
+      if (!("IntersectionObserver" in window)) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const targetId = entry.target.id;
+              navLinks.forEach((link) => {
+                const active = link.getAttribute("data-nav") === targetId || link.getAttribute("href") === `#${targetId}`;
+                link.classList.toggle("is-active", active);
+              });
+            }
+          });
+        },
+        {
+          rootMargin: "-15% 0px -65% 0px",
+          threshold: 0
+        }
+      );
+
+      sections.forEach((s) => observer.observe(s.el));
+    }
+
+    initBackToTop();
+    initScrollSpy();
   });

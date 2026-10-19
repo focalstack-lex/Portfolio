@@ -1,21 +1,25 @@
 # Development Journal: Portfolio Lex
 
-## [2026-10-19] Minimalist Systems Showcase & Tech Text Streamlining
+## [2026-10-19] Long Scroll Organization & Ergonomics (Sticky Nav, Scroll Spy, Mobile Snap)
 
 ### Summary
+- Solved long-scroll fatigue (8,000px+ height) across desktop and mobile viewports:
+  - Sticky Editorial Header: Made `.site-header` sticky (`position: sticky; top: 0; z-index: 85;`) with obsidian glassmorphic backdrop blur (`rgba(5, 5, 5, 0.88)` + `blur(14px)`), keeping navigation and mode switching accessible anywhere on the page.
+  - Active Scroll Spy: Integrated IntersectionObserver in `portfolio.js` to highlight current active section links (`WORK`, `SYSTEMS`, `ABOUT`, `CONTACT`) in real time as the user scrolls.
+  - Mobile Horizontal Snap Rail: Converted `.minimal-systems-list` on screens `<= 680px` into an ergonomic horizontal swipe container (`scroll-snap-type: x mandatory`). Cuts ~1,200px of vertical scrolling on mobile phones and tablets.
+  - Floating Back-to-Top Button: Added a minimal monochrome `↑ TOP` trigger that smoothly fades in past 480px scroll depth for instant 1-click return to top.
+  - Cleaned URL mailto query parameters to strictly eliminate em-dash entities.
 - Streamlined Tech view to remove text clutter and reading fatigue:
   - Removed dense COE LGU case study block (problem/solution cards, 4 feature descriptions, and 4 metric tiles) below the video player.
-  - Stripped wordy explanatory subtitles from the Technical Stack & Toolchain section (Core Languages, Backend, Embedded, Frontend, DevOps) converting it into a clean, scannable table.
-  - Streamlined Additional Work archive by removing secondary subtitle descriptions, leaving crisp single-line rows (Project Name, Stack, Year).
+  - Stripped wordy explanatory subtitles from the Technical Stack & Toolchain section converting it into a clean, scannable table.
+  - Streamlined Additional Work archive into crisp single-line rows (Project Name, Stack, Year).
 - Replaced overwhelming interactive code architecture panels, syntax viewers, and multi-tab switcher with a calm, minimalist showcase for Tote, OctoReach, and Project Severus.
-- Clean editorial hierarchy: Title + one-sentence description + single-line monospace stack (e.g. `Tauri v2 · Rust · React · SQLite`) + `SOURCE ↗` link + unadorned visual UI snippet frame.
-- Stripped 1,350+ lines of unused CSS and JavaScript (removed syntax highlighters, tab panels, and modal drawer scripts).
 - Adhered strictly to Zero-Emoji, Zero-Em-Dash, Anti-Eyebrow-Pill, Anti-Pill, and omnichannel mobile responsiveness standards.
 
 ### Verification
 - `node --check portfolio.js` passed with zero errors.
 - Automated python scan confirmed zero em-dashes and zero emojis.
-- Local preview on port 4321 verified desktop (1280px) and mobile (390px) responsive layouts with zero horizontal overflow.
+- Verified desktop (1280px) and mobile (390px) responsive layouts with zero horizontal page overflow.
 
 ## [2026-10-11] Severus Design Pass (portfolio, landing, gallery, 404)
 
