@@ -1,4 +1,18 @@
-# Development Journal — Portfolio Lex
+# Development Journal: Portfolio Lex
+
+## [2026-10-19] Minimalist Systems Showcase & Code Clutter Removal
+
+### Summary
+- Replaced overwhelming interactive code architecture panels, syntax viewers, and multi-tab switcher with a calm, minimalist showcase for Tote, OctoReach, and Project Severus.
+- Clean editorial hierarchy: Title + one-sentence description + single-line monospace stack (e.g. `Tauri v2 · Rust · React · SQLite`) + `SOURCE ↗` link + unadorned visual UI snippet frame.
+- Stripped 1,350+ lines of unused CSS and JavaScript (removed syntax highlighters, tab panels, and modal drawer scripts).
+- Preserved secondary engineering archive in an unboxed, scannable table (ChemLab, Capstone Compass, Automated Medicine Dispenser, eBarangay Portal, PMAEE CadetCoach).
+- Adhered strictly to Zero-Emoji, Zero-Em-Dash, Anti-Eyebrow-Pill, Anti-Pill, and omnichannel mobile responsiveness standards.
+
+### Verification
+- `node --check portfolio.js` passed with zero errors.
+- Automated python scan confirmed zero em-dashes and zero emojis.
+- Local preview on port 4321 verified desktop (1280px) and mobile (390px) responsive layouts with zero horizontal overflow.
 
 ## [2026-10-11] Severus Design Pass (portfolio, landing, gallery, 404)
 
