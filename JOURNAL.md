@@ -130,3 +130,7 @@
 
 - The Tote product page moved out of this portfolio into the Tote repository's `site/` folder, served at https://totedesk.website. Added permanent redirects for `/tote` and `/tote/*` to the new domain so installed 0.3.0 copies that still read `codewithlex.site/tote/latest.json` can reach the 0.4.0 manifest. Commit a857230, pushed, `vercel deploy --prod` (Ready in 14s).
 - Verified live: `/tote`, `/tote/latest.json`, `/tote/download/Tote_0.3.0_x64-setup.exe`, `/tote/privacy` and `/tote/license` all return 308 to `https://totedesk.website/...`; following them returns 200 (manifest 775 bytes, installer 5,345,970 bytes); the portfolio root still returns 200.
+
+## 2026-10-19: Tote files removed
+
+- The Tote product page now lives only at https://totedesk.website, so removed the portfolio's `tote/` folder and the dead Tote-specific headers and rewrites. The `/tote` and `/tote/*` redirects stay, so installed 0.3.0 copies still reach the 0.4.0 manifest.
