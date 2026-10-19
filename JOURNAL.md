@@ -1,12 +1,15 @@
 # Development Journal: Portfolio Lex
 
-## [2026-10-19] Minimalist Systems Showcase & Code Clutter Removal
+## [2026-10-19] Minimalist Systems Showcase & Tech Text Streamlining
 
 ### Summary
+- Streamlined Tech view to remove text clutter and reading fatigue:
+  - Removed dense COE LGU case study block (problem/solution cards, 4 feature descriptions, and 4 metric tiles) below the video player.
+  - Stripped wordy explanatory subtitles from the Technical Stack & Toolchain section (Core Languages, Backend, Embedded, Frontend, DevOps) converting it into a clean, scannable table.
+  - Streamlined Additional Work archive by removing secondary subtitle descriptions, leaving crisp single-line rows (Project Name, Stack, Year).
 - Replaced overwhelming interactive code architecture panels, syntax viewers, and multi-tab switcher with a calm, minimalist showcase for Tote, OctoReach, and Project Severus.
 - Clean editorial hierarchy: Title + one-sentence description + single-line monospace stack (e.g. `Tauri v2 · Rust · React · SQLite`) + `SOURCE ↗` link + unadorned visual UI snippet frame.
 - Stripped 1,350+ lines of unused CSS and JavaScript (removed syntax highlighters, tab panels, and modal drawer scripts).
-- Preserved secondary engineering archive in an unboxed, scannable table (ChemLab, Capstone Compass, Automated Medicine Dispenser, eBarangay Portal, PMAEE CadetCoach).
 - Adhered strictly to Zero-Emoji, Zero-Em-Dash, Anti-Eyebrow-Pill, Anti-Pill, and omnichannel mobile responsiveness standards.
 
 ### Verification
